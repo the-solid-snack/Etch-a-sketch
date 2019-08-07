@@ -1,0 +1,26 @@
+.container {
+    margin: 0 auto;
+    border: 1px solid black;
+    height: 250px;
+    width: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.pixel {
+    margin: 0 auto;
+    background-color: antiquewhite;
+    width: 10px;
+    height: 10px;
+}
+
+.active {
+    background-color: black;
+}
+
+
+#gridOn {
+    box-sizing: border-box;
+    border: 1px solid black;
+}

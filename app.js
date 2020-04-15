@@ -1,13 +1,10 @@
 const wrapper = document.querySelector(".wrapper");
-let gridSize = 256;
+let gridSize=256;
 let root = document.documentElement;
 
 function createGrid(gridSize) {
-  do {
-  gridSize = prompt("How large a grid do yo want", "16");
-  } while (gridSize < 0 && gridSize > 100);
-
-  for (let i = 0; i < gridSize*gridSize; i++) {
+  let gridArea = gridSize;
+  for (let i = 0; i < gridSize; i++) {
     const div = document.createElement("div");
     div.className = "pixel";
     wrapper.appendChild(div);
@@ -37,12 +34,12 @@ start.addEventListener("click", () => {
 
 const reset = document.querySelector("#reset");
 reset.addEventListener("click", () => {
-  reset();
+  resetGrid();
 });
 
 const plus = document.querySelector("#plus");
 plus.addEventListener ("click", () => {
-  createGrid();
-  root.style.setProperty("--rowNum", gridSize);
-  root.style.setProperty("--colNum", gridSize);
+  root.style.setProperty("--rowNum", 32);
+  root.style.setProperty("--colNum", 32);
+  createGrid(1024);
 });
